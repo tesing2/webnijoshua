@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Explorer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: url('images/background.jfif') no-repeat center center;
+            background-size: cover;
+        }
+
+        /* NAV */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            text-shadow: 2px 2px 10px black;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin: 20px 0;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            font-size: 18px;
+            background: gold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* PLANETS */
+        .planets {
+            padding: 60px 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .planets h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .planet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .planet-card {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .planet-card:hover {
+            transform: scale(1.05);
+        }
+
+         .planet-card img {
+         width: 100%;
+         height: 150px;        
+         object-fit: cover;    
+         border-radius: 10px;
+        }
+
+        /* FACTS */
+        .facts {
+            padding: 60px 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+        }
+
+        .facts h2 {
+            margin-bottom: 20px;
+        }
+
+        .facts ul {
+            list-style: none;
+            font-size: 20px;
+        }
+
+        .facts li {
+            margin: 10px 0;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+<p id="easterEgg" onclick="showEgg()" style="position: fixed; bottom: 10px; right: 10px; cursor: pointer; opacity: 0.2;">
+    🌑
+</p>
+
+<script>
+function showEgg() {
+    alert("Joshualicious, www.barbin.com, harrie pogi sila pangit, awit sa bulutong, trisha betlog");
+}
+</script>
+<!-- NAVIGATION -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#planets">Planets</a>
+    <a href="#facts">Facts</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+    <h1>Explore the Planets</h1>
+    <p>Discover the wonders of our solar system</p>
+    <button onclick="alert('Joshua Lacson')">Learn More</button>
+</div>
+
+<!-- PLANETS -->
+<section class="planets" id="planets">
+    <h2>Our Planets</h2>
+
+    <div class="planet-grid">
+        <div class="planet-card">
+            <img src="images/mercury.jfif">
+            <h3>Mercury</h3>
+        </div>
+
+        <div class="planet-card">
+            <img src="images/venus.jfif">
+            <h3>Venus</h3>
+        </div>
+
+        <div class="planet-card">
+            <img src="images/mars.jfif">
+            <h3>Mars</h3>
+        </div>
+
+        <div class="planet-card">
+            <img src="images/jupiter.jfif">
+            <h3>Jupiter</h3>
+        </div>
+
+        <div class="planet-card">
+            <img src="images/saturn.jfif">
+            <h3>Saturn</h3>
+        </div>
+    </div>
+</section>
+
+<!-- FACTS -->
+<section class="facts" id="facts">
+    <h2>Fun Facts</h2>
+    <ul>
+        <li>🌍 Earth is the only planet known to support life.</li>
+        <li>🔥 Venus is the hottest planet.</li>
+        <li>🪐 Saturn has beautiful rings.</li>
+        <li>🌪 Jupiter has a giant storm called the Great Red Spot.</li>
+    </ul>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Planet Explorer</p>
+</footer>
+
+</body>
+</html>
